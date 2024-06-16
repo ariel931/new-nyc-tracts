@@ -1,6 +1,6 @@
 ---
-title: "Mass Tracts"
-author: "Ariel Fader"
+title: Mass Tracts
+author: Ariel Fader
 format: html
 execute:
   echo: FALSE
@@ -8,10 +8,17 @@ execute:
 
 ```{r}
 #| message: FALSE
+#| warning: FALSE
 library(tidyverse)
+library(dplyr)
 ```
 
 ```{r}
 x <- read_csv("mass-tracts.csv")
+```
+
+```{r}
+x |> drop_na() |>
+  ggplot(aes(x = med_income, fill = race)) + geom_density(alpha = 0.5) + labs(title = "Median Income for Massachusetts Census Tracts", subtitle = "The richest tracts are White", x = "Median Income", y = "Density", fill = "Race")
 ```
 
