@@ -1,5 +1,6 @@
 ---
 title: "About"
 ---
-
-Ariel Fader
+## About Me
+I am Ariel, an incoming freshman at the University of Pennsylvania.
+[Kane's Free Data Science Bootcamp](https://bootcamp.davidkane.info)
